@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "67a7111a-a38a-4ff9-bdbe-2a56034e7103",
+		"name": "Go web service with Gin",
+		"description": "# a RESTful API with Go and Ginn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30124816"
+	},
+	"item": [
+		{
+			"name": "GET Albums",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"albums"
+					]
+				},
+				"description": "List all registered albums"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"4\",\n    \"title\": \"The Modern Sound of Blues\",\n    \"artist\": \"Betty Carter\",\n    \"price\": 49.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"albums"
+					]
+				},
+				"description": "Create a new album"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Album by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/albums/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"albums",
+						"9"
+					]
+				},
+				"description": "Get a single album by its ID"
+			},
+			"response": []
+		}
+	]
+}
